@@ -1,11 +1,16 @@
-import React from 'react';
+import React from "react";
+import { StyledAlert } from "./Alert.styled";
+import { useContext } from "react";
+import variantsTheme from "../../../themes/variantsTheme";
 
-import { StyledAlert } from './Alert.styled';
+const Alert = (props) => {
+  const variants = useContext(variantsTheme);
 
-const Alert = props => {
-    return (
-        <StyledAlert>{props.children}</StyledAlert>
-    );
-}
+  return (
+    <StyledAlert setVariant={props.variant} variantsList={variants}>
+      {props.children}
+    </StyledAlert>
+  );
+};
 
 export default Alert;
