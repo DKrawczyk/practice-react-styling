@@ -5,7 +5,7 @@ import variantsTheme from "../../../themes/variantsTheme";
 
 const Alert = (props) => {
   const variants = useContext(variantsTheme);
-  console.log(props);
+  // console.log(props);
   return (
     <StyledAlert setVariant={props.variant} variantsList={variants}>
       {props.children}

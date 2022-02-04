@@ -1,10 +1,11 @@
 import React from "react";
-// import { StyledButton } from "./Button.styled";
+import { StyledButton } from "./Button.styled";
 
 const Button = (props) => {
-  console.log("test");
+  const { size, variant } = props;
+  console.log(props);
   return (
-    <StyledButton variant={variant} size={size}>
+    <StyledButton size={size} variant={variant}>
       {props.children}
     </StyledButton>
   );
